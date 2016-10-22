@@ -4,3 +4,30 @@ $color-primary: $palette-teal-500;
 $color-accent: $palette-pink-A200;
 
 @import "material-design-lite";
+
+.action-box  {
+	position:relative;
+	width:100%;
+}
+
+.action-list {
+	display:none;
+	position:absolute;
+	top:-10px;
+	right:50px;
+	background-color:#f0f0f0;
+	// padding:5px;
+	margin:0;padding:0;
+}
+
+.action-list ul {
+	list-style-type:none;
+
+}
+
+.action-list ul li {
+	border-bottom:1px solid #d9d9d9;
+	padding-bottom:2px;
+	// background-color:green;
+	margin-left:-100%;
+}
