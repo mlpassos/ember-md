@@ -6,14 +6,42 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyDLHtT7XeTZqbJYbAZprumVFHa9ZJuX2Tc",
+      authDomain: "e-pautas.firebaseapp.com",
+      databaseURL: "https://e-pautas.firebaseio.com",
+      storageBucket: "e-pautas.appspot.com",
+      messagingSenderId: "568980210268"
+    },
+    torii: {  
+      sessionServiceName: 'session',
+      providers: {
+        'google-oauth2': {
+          apiKey:"605443485040-v57m0s296k2befmmtjds8p8gu19mtbmd.apps.googleusercontent.com",
+          redirectUri: "https://localhost:4200/oauth2callback"
+        }
+      }
+    },
+    // torii: {  
+    //   sessionServiceName: 'session',
+    //   providers: {
+    //     'google-oauth2': {
+    //       apiKey:"605443485040-vlsktsl59tsla3latdgfb1q1jqm093sk.apps.googleusercontent.com",
+    //       redirectUri: "https://ember-secom-app.firebaseapp.com/__/auth/handler"
+    //       // redirectUri: "https://auth.firebase.com/v2/ember-secom-app/auth/google/callback",
+    //     }
+    //   }
+    // },
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       }
-    },
-    sassOptions: {
-      includePaths: ['bower_components/material-design-lite/src']
     },
     APP: {
       // Here you can pass flags/options to your application instance

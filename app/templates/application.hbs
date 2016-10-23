@@ -1,10 +1,14 @@
 {{#mdl-nav title='e-pautas' fixedHeader=true closeDrawerOnItemClick=true}}
   {{mdl-nav-item name='Home'   route='home'}}
-  {{mdl-nav-item name='Login'  route='login'}}
-  {{!-- {{mdl-nav-item name='Nav'       route='navs'}} --}}
+  {{mdl-nav-item name='Login'  route=''}}
 <div class="mdl-grid">
   	<div class="mdl-cell mdl-cell--12-col">
+  		{{mdl-button text='Login' action="login" isColored=false}}
+  		{{mdl-button text='Logout' action="logout" isColored=false}}
     	{{outlet}}
+    	{{!-- {{#if session.isAuthenticated}}
+      		{{mdl-button icon='more_vert' id="action-more" class="action-bar" isColored=false}}
+    	{{/if}} --}}
 	</div>
 </div>
 {{/mdl-nav}}
